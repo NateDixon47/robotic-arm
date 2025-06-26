@@ -1,0 +1,38 @@
+[0.006s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nate-dixon/robot_arm_project/src/my_robot_arm_control -DCMAKE_INSTALL_PREFIX=/home/nate-dixon/robot_arm_project/install/my_robot_arm_control
+[0.046s] -- The C compiler identification is GNU 13.3.0
+[0.082s] -- The CXX compiler identification is GNU 13.3.0
+[0.094s] -- Detecting C compiler ABI info
+[0.157s] -- Detecting C compiler ABI info - done
+[0.166s] -- Check for working C compiler: /usr/bin/cc - skipped
+[0.166s] -- Detecting C compile features
+[0.166s] -- Detecting C compile features - done
+[0.174s] -- Detecting CXX compiler ABI info
+[0.241s] -- Detecting CXX compiler ABI info - done
+[0.249s] -- Check for working CXX compiler: /usr/bin/c++ - skipped
+[0.249s] -- Detecting CXX compile features
+[0.249s] -- Detecting CXX compile features - done
+[0.251s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.334s] -- Found Python3: /usr/bin/python3 (found version "3.12.3") found components: Interpreter 
+[0.397s] -- Found ur_description: 3.2.0 (/opt/ros/jazzy/share/ur_description/cmake)
+[0.398s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.424s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.433s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.444s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.455s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.507s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.509s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.575s] -- Found OpenSSL: /usr/lib/x86_64-linux-gnu/libcrypto.so (found version "3.0.13")  
+[0.587s] -- Found FastRTPS: /opt/ros/jazzy/include (Required is at least version "2.13") 
+[0.601s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.642s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.650s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.658s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.719s] -- Configuring incomplete, errors occurred!
+[0.719s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[0.719s]   ament_target_dependencies() the passed package name 'sensor_msgs' was not
+[0.719s]   found before
+[0.719s] Call Stack (most recent call first):
+[0.719s]   CMakeLists.txt:29 (ament_target_dependencies)
+[0.719s] 
+[0.719s] [0m
+[0.724s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nate-dixon/robot_arm_project/src/my_robot_arm_control -DCMAKE_INSTALL_PREFIX=/home/nate-dixon/robot_arm_project/install/my_robot_arm_control

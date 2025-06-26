@@ -1,0 +1,23 @@
+[0.006s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nate-dixon/robot_arm_project/src/my_robot_arm_control -DCMAKE_INSTALL_PREFIX=/home/nate-dixon/robot_arm_project/install/my_robot_arm_control
+[0.018s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.152s] -- Found ur_description: 3.2.0 (/opt/ros/jazzy/share/ur_description/cmake)
+[0.152s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.165s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.169s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.175s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.181s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.213s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.214s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.256s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.289s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.296s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.303s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.350s] [31mCMake Error at /opt/ros/jazzy/share/ament_cmake_target_dependencies/cmake/ament_target_dependencies.cmake:77 (message):
+[0.350s]   ament_target_dependencies() the passed package name 'sensor_msgs' was not
+[0.350s]   found before
+[0.350s] Call Stack (most recent call first):
+[0.350s]   CMakeLists.txt:29 (ament_target_dependencies)
+[0.350s] 
+[0.350s] [0m
+[0.351s] -- Configuring incomplete, errors occurred!
+[0.355s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '1': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake /home/nate-dixon/robot_arm_project/src/my_robot_arm_control -DCMAKE_INSTALL_PREFIX=/home/nate-dixon/robot_arm_project/install/my_robot_arm_control

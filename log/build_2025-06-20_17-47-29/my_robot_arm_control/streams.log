@@ -1,0 +1,25 @@
+[0.006s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nate-dixon/robot_arm_project/build/my_robot_arm_control -- -j32 -l32
+[0.056s] [ 50%] [32mBuilding CXX object CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o[0m
+[2.100s] [100%] [32m[1mLinking CXX executable robot_controller[0m
+[2.188s] [100%] Built target robot_controller
+[2.199s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nate-dixon/robot_arm_project/build/my_robot_arm_control -- -j32 -l32
+[2.208s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nate-dixon/robot_arm_project/build/my_robot_arm_control
+[2.215s] -- Install configuration: ""
+[2.215s] -- Installing: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/robot_controller
+[2.216s] -- Set non-toolchain portion of runtime path of "/home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/robot_controller" to ""
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/package_run_dependencies/my_robot_arm_control
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/parent_prefix_path/my_robot_arm_control
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/ament_prefix_path.sh
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/ament_prefix_path.dsv
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/path.sh
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/path.dsv
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.bash
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.sh
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.zsh
+[2.216s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.dsv
+[2.216s] -- Installing: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/package.dsv
+[2.217s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/packages/my_robot_arm_control
+[2.217s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/cmake/my_robot_arm_controlConfig.cmake
+[2.217s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/cmake/my_robot_arm_controlConfig-version.cmake
+[2.217s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/package.xml
+[2.218s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '0': CMAKE_PREFIX_PATH=${CMAKE_PREFIX_PATH}:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nate-dixon/robot_arm_project/build/my_robot_arm_control
