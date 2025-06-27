@@ -1,0 +1,58 @@
+[0.007s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=/home/nate-dixon/robot_arm_project/install/ur_description:/home/nate-dixon/robot_arm_project/install/my_robot_arm_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nate-dixon/robot_arm_project/build/my_robot_arm_control -- -j32 -l32
+[0.028s] -- Found ament_cmake: 2.5.3 (/opt/ros/jazzy/share/ament_cmake/cmake)
+[0.161s] -- Found ur_description: 3.2.0 (/opt/ros/jazzy/share/ur_description/cmake)
+[0.161s] -- Found rclcpp: 28.1.8 (/opt/ros/jazzy/share/rclcpp/cmake)
+[0.178s] -- Found rosidl_generator_c: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_c/cmake)
+[0.183s] -- Found rosidl_generator_cpp: 4.6.5 (/opt/ros/jazzy/share/rosidl_generator_cpp/cmake)
+[0.190s] -- Using all available rosidl_typesupport_c: rosidl_typesupport_fastrtps_c;rosidl_typesupport_introspection_c
+[0.198s] -- Using all available rosidl_typesupport_cpp: rosidl_typesupport_fastrtps_cpp;rosidl_typesupport_introspection_cpp
+[0.236s] -- Found rmw_implementation_cmake: 7.3.2 (/opt/ros/jazzy/share/rmw_implementation_cmake/cmake)
+[0.237s] -- Found rmw_fastrtps_cpp: 8.4.2 (/opt/ros/jazzy/share/rmw_fastrtps_cpp/cmake)
+[0.284s] -- Using RMW implementation 'rmw_fastrtps_cpp' as default
+[0.321s] -- Found std_msgs: 5.3.6 (/opt/ros/jazzy/share/std_msgs/cmake)
+[0.329s] -- Found geometry_msgs: 5.3.6 (/opt/ros/jazzy/share/geometry_msgs/cmake)
+[0.337s] -- Found sensor_msgs: 5.3.6 (/opt/ros/jazzy/share/sensor_msgs/cmake)
+[0.352s] -- Found ament_lint_auto: 0.17.2 (/opt/ros/jazzy/share/ament_lint_auto/cmake)
+[0.412s] -- Added test 'cppcheck' to perform static code analysis on C / C++ code
+[0.412s] -- Configured cppcheck include dirs: 
+[0.412s] -- Configured cppcheck exclude dirs and/or files: 
+[0.412s] -- Added test 'flake8' to check Python code syntax and style conventions
+[0.412s] -- Configured 'flake8' exclude dirs and/or files: 
+[0.412s] -- Added test 'lint_cmake' to check CMake code style
+[0.413s] -- Added test 'pep257' to check Python code against some of the docstring style conventions in PEP 257
+[0.413s] -- Added test 'uncrustify' to check C / C++ code style
+[0.413s] -- Configured uncrustify additional arguments: 
+[0.413s] -- Added test 'xmllint' to check XML markup files
+[0.414s] -- Configuring done (0.4s)
+[0.423s] -- Generating done (0.0s)
+[0.427s] -- Build files have been written to: /home/nate-dixon/robot_arm_project/build/my_robot_arm_control
+[0.458s] [ 25%] [32mBuilding CXX object CMakeFiles/test_input.dir/src/test_control_input.cpp.o[0m
+[0.464s] [ 75%] Built target robot_controller
+[2.598s] [100%] [32m[1mLinking CXX executable test_input[0m
+[2.687s] [100%] Built target test_input
+[2.698s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '0': CMAKE_PREFIX_PATH=/home/nate-dixon/robot_arm_project/install/ur_description:/home/nate-dixon/robot_arm_project/install/my_robot_arm_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --build /home/nate-dixon/robot_arm_project/build/my_robot_arm_control -- -j32 -l32
+[2.699s] Invoking command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control': CMAKE_PREFIX_PATH=/home/nate-dixon/robot_arm_project/install/ur_description:/home/nate-dixon/robot_arm_project/install/my_robot_arm_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nate-dixon/robot_arm_project/build/my_robot_arm_control
+[2.705s] -- Install configuration: ""
+[2.705s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/robot_controller
+[2.705s] -- Installing: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/test_input
+[2.706s] -- Set non-toolchain portion of runtime path of "/home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/test_input" to ""
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//launch
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//launch/my_robot_launch.launch.py
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//rviz
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//rviz/robot_control.rviz
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/package_run_dependencies/my_robot_arm_control
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/parent_prefix_path/my_robot_arm_control
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/ament_prefix_path.sh
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/ament_prefix_path.dsv
+[2.706s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/path.sh
+[2.707s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/environment/path.dsv
+[2.707s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.bash
+[2.707s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.sh
+[2.707s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.zsh
+[2.708s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/local_setup.dsv
+[2.708s] -- Installing: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/package.dsv
+[2.708s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/packages/my_robot_arm_control
+[2.708s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/cmake/my_robot_arm_controlConfig.cmake
+[2.708s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/cmake/my_robot_arm_controlConfig-version.cmake
+[2.708s] -- Up-to-date: /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control/package.xml
+[2.709s] Invoked command in '/home/nate-dixon/robot_arm_project/build/my_robot_arm_control' returned '0': CMAKE_PREFIX_PATH=/home/nate-dixon/robot_arm_project/install/ur_description:/home/nate-dixon/robot_arm_project/install/my_robot_arm_control:/opt/ros/jazzy/opt/gz_sim_vendor:/opt/ros/jazzy/opt/gz_sensors_vendor:/opt/ros/jazzy/opt/gz_physics_vendor:/opt/ros/jazzy/opt/sdformat_vendor:/opt/ros/jazzy/opt/gz_gui_vendor:/opt/ros/jazzy/opt/gz_transport_vendor:/opt/ros/jazzy/opt/gz_rendering_vendor:/opt/ros/jazzy/opt/gz_plugin_vendor:/opt/ros/jazzy/opt/gz_fuel_tools_vendor:/opt/ros/jazzy/opt/gz_msgs_vendor:/opt/ros/jazzy/opt/gz_common_vendor:/opt/ros/jazzy/opt/gz_math_vendor:/opt/ros/jazzy/opt/gz_utils_vendor:/opt/ros/jazzy/opt/gz_tools_vendor:/opt/ros/jazzy/opt/gz_ogre_next_vendor:/opt/ros/jazzy/opt/gz_dartsim_vendor:/opt/ros/jazzy/opt/gz_cmake_vendor:/opt/ros/jazzy DEBUGINFOD_URLS=https://debuginfod.ubuntu.com /usr/bin/cmake --install /home/nate-dixon/robot_arm_project/build/my_robot_arm_control

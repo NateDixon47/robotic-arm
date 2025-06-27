@@ -210,6 +210,19 @@ robot_controller/fast:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/build
 .PHONY : robot_controller/fast
 
+#=============================================================================
+# Target rules for targets named test_input
+
+# Build rule for target.
+test_input: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 test_input
+.PHONY : test_input
+
+# fast build rule for target.
+test_input/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input.dir/build.make CMakeFiles/test_input.dir/build
+.PHONY : test_input/fast
+
 src/robot_controller.o: src/robot_controller.cpp.o
 .PHONY : src/robot_controller.o
 
@@ -234,6 +247,30 @@ src/robot_controller.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/robot_controller.dir/build.make CMakeFiles/robot_controller.dir/src/robot_controller.cpp.s
 .PHONY : src/robot_controller.cpp.s
 
+src/test_control_input.o: src/test_control_input.cpp.o
+.PHONY : src/test_control_input.o
+
+# target to build an object file
+src/test_control_input.cpp.o:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input.dir/build.make CMakeFiles/test_input.dir/src/test_control_input.cpp.o
+.PHONY : src/test_control_input.cpp.o
+
+src/test_control_input.i: src/test_control_input.cpp.i
+.PHONY : src/test_control_input.i
+
+# target to preprocess a source file
+src/test_control_input.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input.dir/build.make CMakeFiles/test_input.dir/src/test_control_input.cpp.i
+.PHONY : src/test_control_input.cpp.i
+
+src/test_control_input.s: src/test_control_input.cpp.s
+.PHONY : src/test_control_input.s
+
+# target to generate assembly for a file
+src/test_control_input.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/test_input.dir/build.make CMakeFiles/test_input.dir/src/test_control_input.cpp.s
+.PHONY : src/test_control_input.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -250,9 +287,13 @@ help:
 	@echo "... my_robot_arm_control_uninstall"
 	@echo "... uninstall"
 	@echo "... robot_controller"
+	@echo "... test_input"
 	@echo "... src/robot_controller.o"
 	@echo "... src/robot_controller.i"
 	@echo "... src/robot_controller.s"
+	@echo "... src/test_control_input.o"
+	@echo "... src/test_control_input.i"
+	@echo "... src/test_control_input.s"
 .PHONY : help
 
 

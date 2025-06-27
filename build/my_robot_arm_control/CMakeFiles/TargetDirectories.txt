@@ -1,6 +1,7 @@
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/uninstall.dir
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/my_robot_arm_control_uninstall.dir
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/robot_controller.dir
+/home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/test_input.dir
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/test.dir
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/edit_cache.dir
 /home/nate-dixon/robot_arm_project/build/my_robot_arm_control/CMakeFiles/rebuild_cache.dir

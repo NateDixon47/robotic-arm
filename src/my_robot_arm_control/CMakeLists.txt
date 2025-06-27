@@ -29,9 +29,15 @@ endif()
 add_executable(robot_controller src/robot_controller.cpp)
 ament_target_dependencies(robot_controller rclcpp sensor_msgs)
 
+# Add executable for test control input
+add_executable(test_input src/test_control_input.cpp)
+ament_target_dependencies(test_input rclcpp sensor_msgs)
+
+
 # Install the executable
 install(TARGETS
   robot_controller
+  test_input
   DESTINATION lib/${PROJECT_NAME}
 )
 

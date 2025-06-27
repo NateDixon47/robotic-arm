@@ -722,4 +722,5 @@ set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/uninstall.dir/DependInfo.cmake"
   "CMakeFiles/my_robot_arm_control_uninstall.dir/DependInfo.cmake"
   "CMakeFiles/robot_controller.dir/DependInfo.cmake"
+  "CMakeFiles/test_input.dir/DependInfo.cmake"
   )

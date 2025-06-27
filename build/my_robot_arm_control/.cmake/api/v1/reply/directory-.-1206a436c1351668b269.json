@@ -36,25 +36,25 @@
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 33,
+				"line" : 38,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 39,
+				"line" : 45,
 				"parent" : 0
 			},
 			{
 				"command" : 0,
 				"file" : 0,
-				"line" : 44,
+				"line" : 50,
 				"parent" : 0
 			},
 			{
 				"command" : 5,
 				"file" : 0,
-				"line" : 48,
+				"line" : 54,
 				"parent" : 0
 			},
 			{
@@ -254,6 +254,29 @@
 			{
 				"id" : "robot_controller::@6890427a1f51a3e7e1df",
 				"index" : 1
+			},
+			"destination" : "lib/my_robot_arm_control",
+			"type" : "cxxModuleBmi"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"destination" : "lib/my_robot_arm_control",
+			"paths" : 
+			[
+				"test_input"
+			],
+			"targetId" : "test_input::@6890427a1f51a3e7e1df",
+			"targetIndex" : 2,
+			"type" : "target"
+		},
+		{
+			"backtrace" : 1,
+			"component" : "Unspecified",
+			"cxxModuleBmiTarget" : 
+			{
+				"id" : "test_input::@6890427a1f51a3e7e1df",
+				"index" : 2
 			},
 			"destination" : "lib/my_robot_arm_control",
 			"type" : "cxxModuleBmi"
