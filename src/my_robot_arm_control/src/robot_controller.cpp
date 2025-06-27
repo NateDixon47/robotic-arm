@@ -6,17 +6,19 @@ class RobotController : public rclcpp::Node {
     public:
         RobotController() : Node("control_publisher"),
                             kp_(6, 2.0),
-                            ki_(6, 0.0),
-                            kd_(6, 0.0),
+                            ki_(6, 0.1),
+                            kd_(6, 0.1),
                             integral_error_(6, 0.0),
                             previous_error_(6, 0.0),
                             target_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
-                            current_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0}
+                            current_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+                            first_iteration_(true)
         {
             joint_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
             command_sub_ = this->create_subscription<sensor_msgs::msg::JointState>("/joint_commands", 10, std::bind(&RobotController::command_callback, this, std::placeholders::_1));
             RCLCPP_INFO(this->get_logger(), "RobotController node initialized.");
             timer_ = this->create_wall_timer(std::chrono::milliseconds(50), std::bind(&RobotController::publishJointStates, this));
+            previous_time = this->get_clock()->now();
         }
     private:
 
@@ -69,6 +71,15 @@ class RobotController : public rclcpp::Node {
         std::vector<double> calculate_PID(){
 
             std::vector<double> control_output(6, 0.0);
+            // Calculate time ONCE per function call, not per joint
+            current_time = this->get_clock()->now();
+            double dt = (current_time - previous_time).seconds();            
+            
+            // Handle first iteration (when previous_time isn't set yet)
+            if (first_iteration_) {
+                dt = 0.05; // Use your timer period (50ms = 0.05 seconds)
+                first_iteration_ = false;
+            }
 
             for (int i = 0; i < 6; i++){
 
@@ -78,12 +89,22 @@ class RobotController : public rclcpp::Node {
                 // Proportional term
                 double p_term = kp_[i] * error;
 
+                integral_error_[i] += error * dt;
+
+                double derivative = (error - previous_error_[i]) / dt;
+
+                // Integral term
+                double i_term = ki_[i] * integral_error_[i];
+
+                double d_term = kd_[i] * derivative;
+
                 // control output
-                control_output[i] = p_term;
+                control_output[i] =  p_term + i_term + d_term; // u(t) = Kp * e(t) + Ki * ∫e(t)dt + Kd * de(t)/dt
 
                 // store error for next iteration
                 previous_error_[i] = error;
             }
+            previous_time = current_time;
 
             return control_output;
         }
@@ -101,6 +122,10 @@ class RobotController : public rclcpp::Node {
         std::vector<double> kd_; // Derivative gains
         std::vector<double> integral_error_; // Accumulated error
         std::vector<double> previous_error_; // Last error for derivative
+
+        rclcpp::Time current_time;
+        rclcpp::Time previous_time;
+        bool first_iteration_;
 
 
 
