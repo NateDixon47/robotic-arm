@@ -4,14 +4,31 @@
 
 class RobotController : public rclcpp::Node {
     public:
-        RobotController() : Node("control_publisher"){
+        RobotController() : Node("control_publisher"),
+                            kp_(6, 2.0),
+                            ki_(6, 0.0),
+                            kd_(6, 0.0),
+                            integral_error_(6, 0.0),
+                            previous_error_(6, 0.0),
+                            target_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
+                            current_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0}
+        {
             joint_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
+            command_sub_ = this->create_subscription<sensor_msgs::msg::JointState>("/joint_commands", 10, std::bind(&RobotController::command_callback, this, std::placeholders::_1));
             RCLCPP_INFO(this->get_logger(), "RobotController node initialized.");
-            timer_ = this->create_wall_timer(std::chrono::milliseconds(5000), std::bind(&RobotController::publishJointStates, this));
+            timer_ = this->create_wall_timer(std::chrono::milliseconds(50), std::bind(&RobotController::publishJointStates, this));
         }
     private:
 
         void publishJointStates(){
+
+            std::vector<double> pid_output = calculate_PID();
+            for (int i = 0; i < 6; i++){
+                double max_change = 0.01; // Limit max change per time step to 0.01 radians
+                double change = std::max(-max_change, std::min(max_change, pid_output[i]));
+                current_positions_[i] += change;
+            }
+
             auto message = sensor_msgs::msg::JointState();
             message.header.stamp = this->get_clock()->now();
 
@@ -24,14 +41,7 @@ class RobotController : public rclcpp::Node {
                 "wrist_3_joint"
             };
 
-            message.position = {
-                1.0,
-                1.57,
-                -1.0,
-                -1.57,
-                0.0,
-                0.0
-            };
+            message.position = current_positions_;
 
             message.velocity = {
                 0.0,
@@ -47,9 +57,52 @@ class RobotController : public rclcpp::Node {
 
         }
 
+        void command_callback(const sensor_msgs::msg::JointState::SharedPtr msg){
+            if (msg->position.size() == 6){
+                target_positions_ = msg->position;
+                RCLCPP_INFO(this->get_logger(), "New position received.");
+            } else {
+                RCLCPP_WARN(this->get_logger(), "Wrong number of joints received.");
+            }
+            }
+
+        std::vector<double> calculate_PID(){
+
+            std::vector<double> control_output(6, 0.0);
+
+            for (int i = 0; i < 6; i++){
+
+                // calculate error
+                double error = target_positions_[i] - current_positions_[i];
+
+                // Proportional term
+                double p_term = kp_[i] * error;
+
+                // control output
+                control_output[i] = p_term;
+
+                // store error for next iteration
+                previous_error_[i] = error;
+            }
+
+            return control_output;
+        }
+
         rclcpp::TimerBase::SharedPtr timer_;
         rclcpp::Publisher<sensor_msgs::msg::JointState>::SharedPtr joint_pub_;
+        rclcpp::Subscription<sensor_msgs::msg::JointState>::SharedPtr command_sub_;
         size_t count_ = 0;
+        std::vector<double> target_positions_; // target positions storage vector
+        std::vector<double> current_positions_; // current positions storage vector
+
+        // PID Controller member variables
+        std::vector<double> kp_; // Proportional gains
+        std::vector<double> ki_; // Integral gains
+        std::vector<double> kd_; // Derivative gains
+        std::vector<double> integral_error_; // Accumulated error
+        std::vector<double> previous_error_; // Last error for derivative
+
+
 
 };
 

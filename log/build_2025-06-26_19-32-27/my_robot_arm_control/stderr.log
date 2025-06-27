@@ -1,0 +1,7 @@
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:[m[K In member function ‘[01m[Kvoid RobotController::[01;32m[KpublishJointStates[m[K()[m[K’:
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:31:13:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K;[m[K’ before ‘[01m[Kmessage[m[K’
+   31 |             [01;31m[Kmessage[m[K.velocity = {
+      |             [01;31m[K^~~~~~~[m[K
+gmake[2]: *** [CMakeFiles/robot_controller.dir/build.make:76: CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:137: CMakeFiles/robot_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2
