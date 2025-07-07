@@ -1,0 +1,10 @@
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:[m[K In constructor ‘[01m[KRobotController::[01;32m[KRobotController[m[K()[m[K’:
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:124:29:[m[K [01;35m[Kwarning: [m[K‘[01m[KRobotController::previous_error_[m[K’ will be initialized after [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  124 |         std::vector<double> [01;35m[Kprevious_error_[m[K; // Last error for derivative
+      |                             [01;35m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:116:29:[m[K [01;35m[Kwarning: [m[K  ‘[01m[Kstd::vector<double, std::allocator<double> > RobotController::target_positions_[m[K’ [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+  116 |         std::vector<double> [01;35m[Ktarget_positions_[m[K; // target positions storage vector
+      |                             [01;35m[K^~~~~~~~~~~~~~~~~[m[K
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:7:9:[m[K [01;35m[Kwarning: [m[K  when initialized here [[01;35m[K]8;;https://gcc.gnu.org/onlinedocs/gcc/Warning-Options.html#index-Wreorder-Wreorder]8;;[m[K]
+    7 |         [01;35m[KRobotController[m[K() : Node("control_publisher"),
+      |         [01;35m[K^~~~~~~~~~~~~~~[m[K

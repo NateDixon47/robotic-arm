@@ -1,13 +1,14 @@
 #include <rclcpp/rclcpp.hpp>
 #include <sensor_msgs/msg/joint_state.hpp>
+#include <algorithm>
 
 
 class RobotController : public rclcpp::Node {
     public:
         RobotController() : Node("control_publisher"),
-                            kp_(6, 2.0),
-                            ki_(6, 0.1),
-                            kd_(6, 0.1),
+                            kp_(6, 1.0),
+                            ki_(6, 0.0),
+                            kd_(6, 0.0),
                             integral_error_(6, 0.0),
                             previous_error_(6, 0.0),
                             target_positions_{0.0, 0.0, 0.0, 0.0, 0.0, 0.0},
@@ -17,7 +18,7 @@ class RobotController : public rclcpp::Node {
             joint_pub_ = this->create_publisher<sensor_msgs::msg::JointState>("/joint_states", 10);
             command_sub_ = this->create_subscription<sensor_msgs::msg::JointState>("/joint_commands", 10, std::bind(&RobotController::command_callback, this, std::placeholders::_1));
             RCLCPP_INFO(this->get_logger(), "RobotController node initialized.");
-            timer_ = this->create_wall_timer(std::chrono::milliseconds(50), std::bind(&RobotController::publishJointStates, this));
+            timer_ = this->create_wall_timer(std::chrono::milliseconds(25), std::bind(&RobotController::publishJointStates, this));
             previous_time = this->get_clock()->now();
         }
     private:
@@ -26,7 +27,7 @@ class RobotController : public rclcpp::Node {
 
             std::vector<double> pid_output = calculate_PID();
             for (int i = 0; i < 6; i++){
-                double max_change = 0.01; // Limit max change per time step to 0.01 radians
+                double max_change = 0.1; // Limit max change per time step to 0.05 radians
                 double change = std::max(-max_change, std::min(max_change, pid_output[i]));
                 current_positions_[i] += change;
             }
@@ -126,6 +127,7 @@ class RobotController : public rclcpp::Node {
         rclcpp::Time current_time;
         rclcpp::Time previous_time;
         bool first_iteration_;
+        double max_integral = 1.0;
 
 
 

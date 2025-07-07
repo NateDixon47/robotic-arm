@@ -91,7 +91,11 @@ if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)
-  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_arm_control/" TYPE DIRECTORY FILES "/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/launch")
+  file(INSTALL DESTINATION "${CMAKE_INSTALL_PREFIX}/share/my_robot_arm_control/" TYPE DIRECTORY FILES
+    "/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/launch"
+    "/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/urdf"
+    "/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/config"
+    )
 endif()
 
 if(CMAKE_INSTALL_COMPONENT STREQUAL "Unspecified" OR NOT CMAKE_INSTALL_COMPONENT)

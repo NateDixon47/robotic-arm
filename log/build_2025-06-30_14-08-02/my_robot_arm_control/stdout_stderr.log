@@ -1,0 +1,13 @@
+[ 25%] [32mBuilding CXX object CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o[0m
+[ 75%] Built target test_input
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:[m[K In constructor ‘[01m[KRobotController::[01;32m[KRobotController[m[K()[m[K’:
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:11:53:[m[K [01;31m[Kerror: [m[Kclass ‘[01m[KRobotController[m[K’ does not have any field named ‘[01m[Kcol[m[K’
+   11 |                             integral_error_(6, 0.0),[01;31m[Kcol[m[K
+      |                                                     [01;31m[K^~~[m[K
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:12:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K([m[K’ before ‘[01m[Kprevious_error_[m[K’
+   12 |                             [01;31m[Kprevious_error_[m[K(6, 0.0),
+      |                             [01;31m[K^~~~~~~~~~~~~~~[m[K
+[01m[K/home/nate-dixon/robot_arm_project/src/my_robot_arm_control/src/robot_controller.cpp:12:29:[m[K [01;31m[Kerror: [m[Kexpected ‘[01m[K{[m[K’ before ‘[01m[Kprevious_error_[m[K’
+gmake[2]: *** [CMakeFiles/robot_controller.dir/build.make:76: CMakeFiles/robot_controller.dir/src/robot_controller.cpp.o] Error 1
+gmake[1]: *** [CMakeFiles/Makefile2:139: CMakeFiles/robot_controller.dir/all] Error 2
+gmake: *** [Makefile:146: all] Error 2

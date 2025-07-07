@@ -11,7 +11,10 @@ public:
         RCLCPP_INFO(this->get_logger(), "Control input node initialized.");
         
         // Start the input process
-        publish_target_positions();
+        // publish_target_positions();
+
+        // Simple set position
+        publish_set_position();
     }
 
 private:
@@ -50,6 +53,39 @@ private:
         std::cin >> choice;
         if (choice == 'y' || choice == 'Y') {
             publish_target_positions();  // Recursive call for another input
+        } else {
+            rclcpp::shutdown();  // Exit the program
+        }
+    }
+
+    void publish_set_position(){
+        
+        // Create and publish the message
+        auto message = sensor_msgs::msg::JointState();
+        message.header.stamp = this->get_clock()->now();
+        
+        message.name = {
+            "shoulder_pan_joint",
+            "shoulder_lift_joint", 
+            "elbow_joint",
+            "wrist_1_joint",
+            "wrist_2_joint",
+            "wrist_3_joint"
+        };
+        
+        message.position = {0.0, -1.0, 0.0, 0.0, 0.0, 0.0};
+        message.velocity = {0.0, 0.0, 0.0, 0.0, 0.0, 0.0};
+        
+        position_pub_->publish(message);
+        
+        std::cout << "Published target positions!" << std::endl;
+        
+        // Ask if user wants to send another command
+        char choice;
+        std::cout << "Send another command? (y/n): ";
+        std::cin >> choice;
+        if (choice == 'y' || choice == 'Y') {
+            publish_set_position();  // Recursive call for another input
         } else {
             rclcpp::shutdown();  // Exit the program
         }

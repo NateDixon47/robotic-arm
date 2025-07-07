@@ -1,6 +1,9 @@
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/robot_controller
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/lib/my_robot_arm_control/test_input
+/home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//launch/gazebo_ur5e.launch.py
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//launch/my_robot_launch.launch.py
+/home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//urdf/ur5e_gazebo.urdf.xacro
+/home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//config/ur5e_controllers.yaml
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/my_robot_arm_control//rviz/robot_control.rviz
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/package_run_dependencies/my_robot_arm_control
 /home/nate-dixon/robot_arm_project/install/my_robot_arm_control/share/ament_index/resource_index/parent_prefix_path/my_robot_arm_control

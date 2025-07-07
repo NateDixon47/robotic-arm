@@ -1,0 +1,31 @@
+controller_manager:
+  ros__parameters:
+    update_rate: 100  # Hz
+    use_sim_time: true
+
+    # Joint State Broadcaster - publishes /joint_states
+    joint_state_broadcaster:
+      type: joint_state_broadcaster/JointStateBroadcaster
+
+    # Position controller for your PID controller to command
+    position_controller:
+      type: position_controllers/JointGroupPositionController
+      joints:
+        - shoulder_pan_joint
+        - shoulder_lift_joint
+        - elbow_joint
+        - wrist_1_joint
+        - wrist_2_joint
+        - wrist_3_joint
+      command_interfaces:
+        - position
+      state_interfaces:
+        - position
+        - velocity
+
+# Gazebo-specific ROS2 Control settings
+gazebo_ros2_control:
+  ros__parameters:
+    robot_param: robot_description
+    robot_param_node: robot_state_publisher
+    use_sim_time: true
